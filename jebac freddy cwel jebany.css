@@ -1,0 +1,1891 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset134 SimSun;}{\f2\fnil\fcharset128 MS PGothic;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang21 /*Last Updated: 2021-4-2*/\par
+\par
+/*you are NOT allowed to reuse ANY of the code below without my permission, thank you*/\par
+\par
+/*Section I: Frame*/\par
+\par
+/*Font/Text*/\par
+\par
+* \{\par
+    font-family: gamefont, JP;\par
+    color: var(--text-color);\par
+\}\par
+\par
+a \{\par
+    color: var(--accent);\par
+\}\par
+\par
+/*Animations*/\par
+\par
+@keyframes breathe \{\par
+    0% \{\par
+        opacity: 0;\par
+    \}\par
+    100% \{\par
+        opacity: 1;\par
+    \}\par
+\}\par
+\par
+@keyframes gradient-border \{\par
+    0%, 200% \{\par
+        background-position: 0 0;\par
+    \}\par
+    99.999999999999999% \{\par
+        background-position: -130% 0;\par
+    \}\par
+\} \par
+\par
+.rainbowText \{\par
+    background-image: linear-gradient(to right, #2e62ff, #0099ff , #00ff00, #ffde3b, #ff3399, #6666ff);\par
+    animation: gradient-border 2s linear infinite;\par
+    background-size: 400% 100%;\par
+    color: transparent !important;\par
+    -webkit-background-clip: text;\par
+\}\par
+\par
+/*No one uses these*/\par
+\par
+#aHolder, .endAHolder \{\par
+    display: none !important;\par
+\}\par
+\par
+#onetrust-consent-sdk \{\par
+    display: none;\par
+\}\par
+\par
+#newsHolder \{\par
+    display: none;\par
+\}\par
+\par
+.krSocial \{\par
+    display: none;\par
+\}\par
+\par
+.imageButton, #editorBtnM \{\par
+    display: none !important;\par
+\}\par
+\par
+::-webkit-scrollbar \{\par
+    display: none;\par
+\}\par
+\par
+#tlInfHold \{\par
+    display: none;\par
+\}\par
+\par
+/*Section II: Chat*/\par
+\par
+#voiceDisplay \{\par
+    display: none;\par
+\}\par
+\par
+#uiBase.onMenu #chatHolder \{\par
+    left: unset;\par
+    right: 20px;\par
+    bottom: 440px !important;\par
+    z-index: 21;\par
+\}\par
+\par
+#chatHolder[style="bottom: 148px;"] \{\par
+    left: 20px !important;\par
+    bottom: 30px !important;\par
+\}\par
+\par
+#uiBase.onMenu #chatList \{\par
+    text-align: right;\par
+\}\par
+\par
+.chatTextOutline \{\par
+    text-shadow: none;\par
+\}\par
+\par
+.chatItem \{\par
+    background-color: var(--bg-color) !important;\par
+    color: var(--accent);\par
+    font-size: 20px;\par
+    border-radius: 0px;\par
+    padding: 8px 16px;\par
+    margin-left: 0;\par
+    margin-right: 6px;\par
+    max-width: 280px;\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+#uiBase.onMenu .chatItem \{\par
+    box-shadow: none;\par
+\}\par
+\par
+.chatMsg \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.chatMsg span[style*="#fff"] \{\par
+    color: var(--text-color) !important;\par
+\}\par
+\par
+.chatMsg span[style*="#9eeb56"] \{\par
+    color: var(--text-color) !important;\par
+\}\par
+\par
+.chatMsg[style="color:#fc03ec"] \{\par
+    color: var(--accent) !important;\par
+\}\par
+\par
+#chatInput \{\par
+    color: #fff;\par
+    background-color: var(--accent);\par
+    border-radius: 0px;\par
+    transform: scale(0);\par
+    height: 0;\par
+    padding: 0;\par
+    transition-duration: 0.25s;\par
+    font-size: 16px;\par
+\}\par
+\par
+#chatInput:focus \{\par
+    height: 100%;\par
+    padding: 8px 16px;\par
+    transform: scale(1);\par
+\}\par
+\par
+#chatInput::placeholder \{\par
+    color: #fff;\par
+\}\par
+\par
+.weaponChatIcon, .headShotChatIcon \{\par
+    filter: brightness(0.5);\par
+\}\par
+\par
+/*Section III: Main Menu*/\par
+\par
+#instructionHolder \{\par
+    backdrop-filter: grayscale(1);\par
+\}\par
+\par
+#uiBase.onMenu #instructions \{\par
+    display: none;\par
+\}\par
+\par
+#gameNameHolder \{\par
+    top: 40px;\par
+    left: 20px;\par
+    transform: unset;\par
+\}\par
+\par
+/*https://i.imgur.com/WgkzcKF.png*/\par
+\par
+/*https://cdn.discordapp.com/attachments/785234774427959349/818683453653647400/yukilogored.png*/\par
+\par
+#mainLogo \{\par
+    content: url(https://i.imgur.com/WgkzcKF.png);\par
+    height: 180px;\par
+    filter: drop-shadow(2px 2px 0px var(--bg-color)) drop-shadow(-2px -2px 0px var(--bg-color)) drop-shadow(2px -2px 0px var(--bg-color)) drop-shadow(-2px 2px 0px var(--bg-color)) drop-shadow(4px 4px 0px var(--bg-color));\par
+    margin-top: 00px;\par
+    transform: skew(0, -8deg);\par
+\}\par
+\par
+#seasonLabel \{\par
+    display: none;\par
+\}\par
+\par
+.headerBarLeft \{\par
+    top: unset;\par
+    bottom: 0;\par
+    border-radius: 0;\par
+    background-color: transparent;\par
+    transform: rotate(2deg);\par
+    z-index: 4;\par
+\}\par
+\par
+.headerBarLeft::before \{\par
+    content: " ";\par
+    position: absolute;\par
+    width: 100%;\par
+    height: calc(100% + 16px);\par
+    padding: 16px;\par
+    left: -16px;\par
+    bottom: -24px;\par
+    background-color: #000;\par
+    transform: skew(8deg, 4deg);\par
+    box-shadow: 8px -8px var(--accent);\par
+\}\par
+\par
+.headerBarLeft div \{\par
+    font-size: 32px;\par
+\}\par
+\par
+.button.lgn \{\par
+    background-color: transparent !important;\par
+    box-shadow: none !important;\par
+    text-shadow: none;\par
+    font-size: 24px;\par
+    text-transform: uppercase;\par
+    width: 360px !important;\par
+\}\par
+\par
+#menuUsernameContainer \{\par
+    z-index: 1;\par
+\}\par
+\par
+#menuMiniProfilePic \{\par
+    display: none;\par
+\}\par
+\par
+.krInfo \{\par
+    z-index: 1;\par
+\}\par
+\par
+#menuKRCount \{\par
+    color: #fff;\par
+\}\par
+\par
+#mLevelCont \{\par
+    box-shadow: 24px -8px var(--accent);\par
+    position: absolute;\par
+    left: calc(100% - 8px) !important;\par
+\}\par
+\par
+#mLevelCont::before \{\par
+    content: "LVL";\par
+    font-size: 16px;\par
+    margin-right: 8px;\par
+\}\par
+\par
+#headerRight \{\par
+    top: 20px;\par
+    padding: 0 20px;\par
+    border-radius: 0;\par
+    background-color: transparent;\par
+    z-index: 2;\par
+\}\par
+\par
+#headerRight .verticalSeparator \{\par
+    display: none;\par
+\}\par
+\par
+#menuRegionLabel \{\par
+    font-size: 24px;\par
+    color: #fff;\par
+    background-color: #000;\par
+    padding: 4px 8px;\par
+    text-transform: uppercase;\par
+    margin-bottom: 12px;\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+/*Spectate Button*/\par
+\par
+#uiBase.onMenu #spectButton \{\par
+    width: 48px;\par
+    top: unset;\par
+    bottom: 20px;\par
+    right: calc(50% - 240px);\par
+    left: unset;\par
+\}\par
+\par
+#spectButton span[style="font-size:15px;color:rgba(255,255,255,0.6)"] \{\par
+    color: transparent !important;\par
+\}\par
+\par
+#spectButton .switchsml \{\par
+    margin: 0;\par
+    position: absolute;\par
+    width: 100%;\par
+\}\par
+\par
+.sliderSml \{\par
+    opacity: 1;\par
+\}\par
+\par
+.sliderSml::before \{\par
+    content: "Spectate";\par
+    font-size: 20px;\par
+    color: white;\par
+    width: max-content;\par
+    height: auto;\par
+    background-color: transparent;\par
+    text-align: center;\par
+    transition-duration: 0.25s;\par
+\}\par
+\par
+.sliderSml::before \{\par
+    content: "visibility_off";\par
+    font-size: 32px;\par
+    color: white;\par
+    width: max-content;\par
+    height: auto;\par
+    background-color: transparent;\par
+    text-align: center;\par
+    transition-duration: 0.25s;\par
+    font-family: 'Material Icons';\par
+\}\par
+\par
+input:checked+.sliderSml::before \{\par
+    content: "visibility";\par
+    transform: unset;\par
+\}\par
+\par
+input:checked+.sliderSml \{\par
+    background-color: transparent !important;\par
+\}\par
+\par
+.sliderSml \{\par
+    opacity: 1;\par
+    background-color: transparent;\par
+\}\par
+\par
+/*Menu Buttons*/\par
+\par
+#subLogoButtons>.button \{\par
+    background-color: transparent !important;\par
+    box-shadow: none !important;\par
+    text-shadow: none !important;\par
+    font-size: 24px !important;\par
+    color: var(--accent);\par
+    padding: 8px 16px !important;\par
+\}\par
+\par
+#menuItemContainer \{\par
+    top: 240px;\par
+    bottom: 240px;\par
+    z-index: 3;\par
+\}\par
+\par
+#menuItemContainer::before \{\par
+    content: " ";\par
+    display: block;\par
+    position: fixed;\par
+    width: 320px;\par
+    left: -120px;\par
+    top: -48px;\par
+    bottom: -48px;\par
+    background-color: var(--bg-color);\par
+    transform: rotateZ(4deg);\par
+    z-index: -1;\par
+\}\par
+\par
+#menuItemContainer::after \{\par
+    content: " ";\par
+    width: 200px;\par
+    height: 200px;\par
+    position: fixed;\par
+    bottom: 0;\par
+    left: -48px;\par
+    background-color: var(--accent);\par
+    border-radius: 50%;\par
+    z-index: -1;\par
+\}\par
+\par
+.menuItem \{\par
+    background-color: transparent;\par
+    transition-duration: 0.25s;\par
+    margin: -1px 0;\par
+    align-items: baseline;\par
+    padding-left: 20px;\par
+    transform-origin: left;\par
+\}\par
+\par
+.menuItem:hover \{\par
+    border-left: 0;\par
+    transform: scale(1.25);\par
+\}\par
+\par
+.menuItem .menuItemIcon \{\par
+    display: none;\par
+\}\par
+\par
+.menuItem .menuItemTitle \{\par
+    margin-top: 0;\par
+    font-size: 32px;\par
+    color: var(--accent);\par
+\}\par
+\par
+#menuBtnChall \{\par
+    font-size: 32px !important;\par
+\}\par
+\par
+.menuItem[onclick="showWindow(1)"] \{\par
+    position: fixed;\par
+    bottom: 120px;\par
+    left: 10px;\par
+    padding: 0;\par
+\}\par
+\par
+#menuBtnSettings \{\par
+    font-size: 0;\par
+    font-family: 'Material Icons';\par
+    filter: none;\par
+\}\par
+\par
+#menuBtnSettings::after \{\par
+    font-size: 36px;\par
+    content: "settings";\par
+    color: #fff;\par
+\}\par
+\par
+#clientExit[onclick="clientExitPopup()"] \{\par
+    position: fixed;\par
+    bottom: 120px;\par
+    left: 72px;\par
+    padding: 0;\par
+\}\par
+\par
+#menuBtnExit \{\par
+    font-size: 0;\par
+    font-family: 'Material Icons';\par
+    filter: none;\par
+\}\par
+\par
+#menuBtnExit::after \{\par
+    font-size: 36px;\par
+    content: "logout";\par
+    color: #fff;\par
+\}\par
+\par
+/*Menu Window*/\par
+\par
+#windowHolder \{\par
+    content: " ";\par
+    position: fixed;\par
+    display: block !important;\par
+    width: 100%;\par
+    height: 100%;\par
+    transform: translateX(100%);\par
+    z-index: 0;\par
+    transition-duration: 0.5s;\par
+\}\par
+\par
+#windowHolder[style="display: block;"] \{\par
+    position: fixed;\par
+    content: " ";\par
+    width: 100%;\par
+    height: 100%;\par
+    transform: translateY(0);\par
+    z-index: 1;\par
+    transition-duration: 0.5s;\par
+\}\par
+\par
+#windowHolder::after \{\par
+    content: " ";\par
+    position: fixed;\par
+    display: block;\par
+    width: 100%;\par
+    height: 100%;\par
+    background-image: url(https://cdn.discordapp.com/attachments/745724397784006816/827732095740805140/chief-keef-psd-433127.png);\par
+    background-size: 480px;\par
+    background-repeat: no-repeat;\par
+    background-position: right calc(100% - 20px);\par
+    z-index: 2;\par
+    pointer-events: none;\par
+    filter: drop-shadow(2px 2px 0px var(--bg-color)) drop-shadow(-2px -2px 0px var(--bg-color)) drop-shadow(2px -2px 0px var(--bg-color)) drop-shadow(-2px 2px 0px var(--bg-color)) drop-shadow(-2px 2px 0px var(--bg-color));\par
+\}\par
+\par
+#windowHeader \{\par
+    width: calc(100% - 172px);\par
+    height: 100%;\par
+    display: block;\par
+    position: absolute;\par
+    right: -92px;\par
+    transform: skew(-4deg, 0deg);\par
+    background-image: linear-gradient(0deg, var(--accent) 180px, transparent 180px);\par
+    background-color: var(--bg-color);\par
+    z-index: 0;\par
+    color: var(--accent);\par
+    font-size: 96px;\par
+    letter-spacing: -1px;\par
+    text-indent: 200px;\par
+    padding: 40px;\par
+    -webkit-text-stroke: 2px;\par
+\}\par
+\par
+#menuWindow \{\par
+    max-height: calc(100% - 240px) !important;\par
+    width: calc(100% - 800px) !important;\par
+    border-radius: 0;\par
+    box-shadow: none;\par
+    top: 144px;\par
+    bottom: 100px;\par
+    border: 0;\par
+    left: unset;\par
+    right: 320px;\par
+    transform: unset;\par
+    background-color: transparent;\par
+    z-index: 4;\par
+\}\par
+\par
+.settName, .settNameSmall \{\par
+    font-size: 32px;\par
+    color: var(--text-color);\par
+\}\par
+\par
+.settText, .settLabel \{\par
+    font-size: 32px;\par
+    color: var(--accent);\par
+\}\par
+\par
+.settName .floatR \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.floatR span[style="color:rgba(0,0,0,0.5)"] \{\par
+    color: var(--accent) !important;\par
+\}\par
+\par
+#menuWindow div[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] \{\par
+    display: none;\par
+\}\par
+\par
+div[style="display:inline-block;vertical-align:top;width:560px;margin-left:10px"] \{\par
+    width: calc(100% - 130px) !important;\par
+\}\par
+\par
+.menuTabsNew \{\par
+    border-radius: 0;\par
+\}\par
+\par
+.menuTabNew \{\par
+    border-width: 0 !important;\par
+    font-size: 20px;\par
+    transition-duration: 0.25s;\par
+    color: var(--text-color);\par
+\}\par
+\par
+.menuTabNew.tabANew \{\par
+    color: var(--accent);\par
+\}\par
+\par
+.menuTabNew:hover \{\par
+    color: var(--accent);\par
+    opacity: 0.75;\par
+\}\par
+\par
+.xpBar \{\par
+    background-color: transparent;\par
+    padding: 0;\par
+    width: 100%;\par
+    height: 42px;\par
+\}\par
+\par
+.xpBar[style*="margin-top:10px"] \{\par
+    margin-top: 0px !important;\par
+\}\par
+\par
+.xpBarV \{\par
+    color: var(--accent);\par
+    font-size: 32px;\par
+    text-align: right;\par
+    top: 0px;\par
+\}\par
+\par
+.xpBarB \{\par
+    display: none;\par
+\}\par
+\par
+.xpBarV::before \{\par
+    content: "Progress";\par
+    float: left;\par
+    color: var(--text-color);\par
+\}\par
+\par
+/*Accounts*/\par
+\par
+.accountInput \{\par
+    font-size: 32px;\par
+    border-radius: 0;\par
+\}\par
+\par
+.accountButton \{\par
+    width: calc(50% - 10px);\par
+    border-radius: 0;\par
+    background-color: var(--accent);\par
+    color: #fff;\par
+    font-size: 32px;\par
+\}\par
+\par
+/*Challenges*/\par
+\par
+.chalCard \{\par
+    background-color: transparent;\par
+    text-shadow: none;\par
+\}\par
+\par
+.chalXPBar \{\par
+    padding: 6px;\par
+    border-radius: 0;\par
+\}\par
+\par
+.chalXPBarC \{\par
+    background-color: var(--accent);\par
+\}\par
+\par
+.chalProg \{\par
+    top: 8px;\par
+\}\par
+\par
+.chalImgC \{\par
+    border-radius: 0;\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+.chalDesc \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.chalRight \{\par
+    color: var(--text-color);\par
+    display: block;\par
+    margin: 0;\par
+\}\par
+\par
+/*Customizet*/\par
+\par
+#menuClassContainer \{\par
+    right: calc(50% - 330px);\par
+    transform: unset;\par
+    top: unset;\par
+    bottom: 10px;\par
+\}\par
+\par
+#bubbleContainer \{\par
+    display: none;\par
+\}\par
+\par
+#menuClassNameTag \{\par
+    display: none;\par
+\}\par
+\par
+#menuClassName \{\par
+    text-shadow: none;\par
+\}\par
+\par
+#menuClassSubtext \{\par
+    text-shadow: none;\par
+\}\par
+\par
+#menuClassSubtext span \{\par
+    color: #fff !important;\par
+\}\par
+\par
+#classPreviewCanvas \{\par
+    opacity: 0;\par
+    transition-duration: 0.25s;\par
+\}\par
+\par
+#menuClassContainer:hover> #classPreviewCanvas \{\par
+    opacity: 1;\par
+\}\par
+\par
+#customizeButton \{\par
+    position: absolute;\par
+    left: 50%;\par
+    bottom: 0;\par
+    transform: translateX(-50%);\par
+    height: 72px;\par
+    opacity: 0;\par
+\}\par
+\par
+/*Loadout Select*/\par
+\par
+.loadoutBtn[onclick="windows[2].action(2)"] \{\par
+    margin-right: 5px;\par
+\}\par
+\par
+#selectorContainer \{\par
+    filter: none;\par
+    background-color: transparent;\par
+    margin: 0;\par
+    top: -12px;\par
+    position: relative;\par
+\}\par
+\par
+\par
+.selectorItem \{\par
+    filter: none !important;\par
+    border-radius: 0;\par
+    background-color: #000;\par
+    height: 133px;\par
+\}\par
+\par
+.settLabel.blackShad \{\par
+    text-shadow: none;\par
+\}\par
+\par
+.selectorItem .selectorIcon \{\par
+    width: 120px;\par
+    height: 120px;\par
+    margin-top: 0px;\par
+    filter: brightness(10);\par
+\}\par
+\par
+.selectorItem.selectedItem \{\par
+    background-color: #000 !important;\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+.custContainer \{\par
+    background-color: rgba(0,0,0,0.12);\par
+    box-shadow: none;\par
+    border-radius: 0;\par
+    border: none;\par
+\}\par
+\par
+.custContainer[style="width: 97.5%"] \{\par
+    width: calc(100% - 18px) !important;\par
+\}\par
+\par
+.custContainer \{\par
+    width: calc(50% - 20px - 1px);\par
+    margin: 4px;\par
+\}\par
+\par
+\par
+#loadoutName \{\par
+    margin: 10px 0 !important;\par
+    border-radius: 0 !important;\par
+\}\par
+\par
+#loadoutSelect \{\par
+    border-radius: 0 !important;\par
+\}\par
+\par
+.loadoutBtn \{\par
+    background-color: #000;\par
+    border-radius: 0;\par
+    color: #fff;\par
+\}\par
+\par
+/*Class Cards*/\par
+\par
+.classCard \{\par
+    border-radius: 0;\par
+    background-color: #fff;\par
+    text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020, -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020, 0 4px #202020, 0 -4px #202020, 4px 0 #202020, -4px 0 #202020;\par
+    transition-duration: 0.25s;\par
+\}\par
+\par
+.classCard:hover \{\par
+    box-shadow: 6px 6px #000;\par
+\}\par
+\par
+.classWeap \{\par
+    opacity: 0;\par
+\}\par
+\par
+.classXPBar \{\par
+    background-color: #000;\par
+    border-radius: 0;\par
+    top: unset;\par
+    bottom: 0;\par
+    left: 0;\par
+    width: 100%;\par
+\}\par
+\par
+.clsXPBarC \{\par
+    background-color: var(--accent);\par
+\}\par
+\par
+.classCard[onclick="selectClass(0)"] \{\par
+    background-color: var(--accent);\par
+    background-image: linear-gradient(0deg, black 96px, transparent 96px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(0)"]::before \{\par
+    content: " ";\par
+    width: 128px;\par
+    height: 128px;\par
+    position: absolute;\par
+    left: 8px;\par
+    top: 48px;\par
+    border-radius: 50%;\par
+    background-color: #fff;\par
+    z-index: -1;\par
+\}\par
+\par
+.classCard[onclick="selectClass(1)"] \{\par
+    background-image: linear-gradient(45deg, black 80px, transparent 80px);\par
+\}\par
+\par
+\par
+.classCard[onclick="selectClass(1)"]::before \{\par
+    content: " ";\par
+    width: 256px;\par
+    height: 256px;\par
+    top: -160px;\par
+    right: -120px;\par
+    position: absolute;\par
+    border-radius: 50%;\par
+    background-color: var(--accent);\par
+    z-index: -1;\par
+\}\par
+\par
+.classCard[onclick="selectClass(2)"] \{\par
+    background-image: linear-gradient(0deg, black 96px, transparent 96px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(3)"]::before \{\par
+    content: " ";\par
+    background-color: var(--accent);\par
+    height: 200px;\par
+    width: 200px;\par
+    position: absolute;\par
+    z-index: -1;\par
+    border-radius: 50%;\par
+    left: calc(50% - 100px);\par
+    top: calc(50% - 100px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(4)"] \{\par
+    background-image: linear-gradient(0deg, black 160px, transparent 160px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(4)"]::before \{\par
+    content: " ";\par
+    position: absolute;\par
+    width: 80px;\par
+    height: 200px;\par
+    top: 40px;\par
+    background-color: var(--accent);\par
+    z-index: -1;\par
+    transform: skewX(16deg);\par
+\}\par
+\par
+.classCard[onclick="selectClass(5)"] \{\par
+    background-image: linear-gradient(45deg, black 154px, transparent 154px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(6)"]::before \{\par
+    content: " ";\par
+    background-color: var(--accent);\par
+    height: 256px;\par
+    width: 256px;\par
+    position: absolute;\par
+    z-index: -1;\par
+    border-radius: 50%;\par
+    left: calc(50% - 128px);\par
+    top: calc(100% - 128px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(7)"] \{\par
+    background-image: linear-gradient(0deg, #2196f3 80px, transparent 80px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(7)"]::before \{\par
+    content: " ";\par
+    background-color: #000;\par
+    position: absolute;\par
+    left: -48px;\par
+    bottom: -72px;\par
+    width: 144px;\par
+    height: 144px;\par
+    z-index: -1;\par
+    transform: rotate(45deg);\par
+\}\par
+\par
+.classCard[onclick="selectClass(7)"]::after \{\par
+    content: " ";\par
+    background-color: var(--accent);\par
+    height: 64px;\par
+    width: 64px;\par
+    position: absolute;\par
+    z-index: -2;\par
+    border-radius: 50%;\par
+    top: 80px;\par
+    right: 0px;\par
+\}\par
+\par
+.classCard[onclick="selectClass(8)"] \{\par
+    background-image: linear-gradient(0deg, var(--accent), 64px, #000 64px, #000 128px, transparent 128px);\par
+\}\par
+\par
+.classCard[onclick="selectClass(9)"]::before \{\par
+    content: " ";\par
+    background-color: #000;\par
+    position: absolute;\par
+    left: calc(50% - 100px);\par
+    top: calc(100% - 100px);\par
+    width: 200px;\par
+    height: 200px;\par
+    z-index: -1;\par
+    transform: rotate(45deg);\par
+\}\par
+\par
+.classCard[onclick="selectClass(11)"] \{\par
+    background-color: #fbc02d;\par
+    box-shadow: inset 0 0 0 35px #000;\par
+\}\par
+\par
+.classCard[onclick="selectClass(12)"] \{\par
+    background-color: var(--accent);\par
+\}\par
+\par
+.classCard[onclick="selectClass(12)"]::before \{\par
+    content: " ";\par
+    background-color: #000;\par
+    position: absolute;\par
+    left: 0;\par
+    bottom: 120px;\par
+    width: 80px;\par
+    height: 80px;\par
+    z-index: -1;\par
+\}\par
+\par
+.classCard[onclick="selectClass(12)"]::after \{\par
+    content: " ";\par
+    background-color: #000;\par
+    position: absolute;\par
+    right: 0;\par
+    bottom: 80px;\par
+    width: 80px;\par
+    height: 80px;\par
+    z-index: -2;\par
+\}\par
+\par
+.classCard[onclick="selectClass(13)"] \{\par
+    background-color: #000;\par
+\}\par
+\par
+.classCard:hover img \{\par
+    opacity: unset;\par
+    transform: unset;\par
+\}\par
+\par
+/*Skins*/\par
+\par
+.skinCard \{\par
+    text-shadow: none;\par
+    border-width: 0 !important;\par
+    border-radius: 0;\par
+    background-color: transparent !important;\par
+\}\par
+\par
+.itemOwn, .itemSea \{\par
+    opacity: 0;\par
+\}\par
+\par
+.itemCnt[data-badge]:after \{\par
+    background-color: #000;\par
+    border-radius: 0;\par
+    font-size: 16px;\par
+    box-shadow: 4px 2px var(--accent);\par
+\}\par
+\par
+.selctInfoBtn \{\par
+    background-color: transparent !important;\par
+    color: var(--accent);\par
+    font-size: 20px;\par
+    padding: 0px 0px !important;\par
+\}\par
+\par
+/*KPD*/\par
+\par
+#policeButton \{\par
+    margin: 0;\par
+    background-color: transparent !important;\par
+    box-shadow: none !important;\par
+    width: auto !important;\par
+    height: auto !important;\par
+    padding: 0;\par
+    text-shadow: none;\par
+    position: absolute;\par
+    bottom: 8px;\par
+    left: calc(50% - 200px);\par
+\}\par
+\par
+#policeButton img \{\par
+    display: none;\par
+\}\par
+\par
+#policeButton::before \{\par
+    content: "local_police";\par
+    font-size: 32px;\par
+    font-family: 'Material Icons';\par
+    color: #fff;\par
+\}\par
+\par
+/*Host Menu*/\par
+\par
+.hostToggle \{\par
+    border-radius: 0;\par
+    background-color: #000;\par
+\}\par
+\par
+#rawMapData \{\par
+    border-radius: 0;\par
+    font-size: 24px;\par
+\}\par
+\par
+.hostMap \{\par
+    border: none;\par
+    height: 94px;\par
+    width: 232px;\par
+\}\par
+\par
+.hostMapBy, .hostMapYear, .hostMapVersion \{\par
+    display: none;\par
+\}\par
+\par
+.hostMapName \{\par
+    top: 50%;\par
+    left: 50%;\par
+    font-size: 24px;\par
+    width: 100%;\par
+    text-align: center;\par
+    transform: translate(-50%, -50%);\par
+\}\par
+\par
+.hostMapImg \{\par
+    filter: grayscale(100%) brightness(0.75);\par
+    border-radius: 0;\par
+    width: 232px;\par
+\}\par
+\par
+.hostMap .blackShad \{\par
+    text-shadow: none;\par
+\}\par
+\par
+.optCheck \{\par
+    transition-duration: 0.25s;\par
+\}\par
+\par
+input:checked+.optCheck \{\par
+    background-color: var(--accent);\par
+\}\par
+\par
+.hostOpt \{\par
+    border-radius: 0;\par
+    border: 0;\par
+    width: 212px;\par
+\}\par
+\par
+.optName \{\par
+    text-shadow: none;\par
+\}\par
+\par
+\par
+/*Server List*/\par
+\par
+.serverHeader \{\par
+    display: flex;\par
+    justify-content: space-around;\par
+\}\par
+\par
+.slider2 \{\par
+    border-radius: 0;\par
+    background-color: #000;\par
+\}\par
+\par
+input:checked+.slider2 \{\par
+    background-color: var(--accent);\par
+\}\par
+\par
+.slider2:before \{\par
+    border-radius: 0;\par
+\}\par
+\par
+#hostMenuBtn \{\par
+    background-color: #000;\par
+    border-radius: 0;\par
+\}\par
+\par
+.menuSelectorHeader \{\par
+    width: calc(100% - 102px);\par
+    font-size: 28px;\par
+\}\par
+\par
+.plusOrMinus \{\par
+    color: var(--accent);\par
+\}\par
+\par
+.quickJoin \{\par
+    border-radius: 0;\par
+    background-color: #000;\par
+\}\par
+\par
+/*Settings*/\par
+\par
+.settingsHeader \{\par
+    background-color: var(--bg-color);\par
+\}\par
+\par
+#settSearch \{\par
+    border-radius: 0;\par
+\}\par
+\par
+#settingsTabLayout \{\par
+    border-radius: 0;\par
+\}\par
+\par
+.settingTab \{\par
+    border-width: 0 !important;\par
+    grid-row: 1;\par
+    font-size: 24px;\par
+    transition-duration: 0.25s;\par
+\}\par
+\par
+.settingTab:hover \{\par
+    opacity: 0.75;\par
+\}\par
+\par
+.settingTab.tabANew \{\par
+    color: var(--accent);\par
+\}\par
+\par
+.settingsBtn \{\par
+    background-color: var(--accent);\par
+    color: #fff;\par
+    border-radius: 0;\par
+\}\par
+\par
+.inputGrey, .inputGrey2 \{\par
+    border-radius: 0;\par
+\}\par
+\par
+#menuWindow select \{\par
+    background-color: transparent !important;\par
+\}\par
+\par
+option \{\par
+    background-color: var(--bg-color);\par
+\}\par
+\par
+.sliderM \{\par
+    background-color: rgba(0,0,0,0.12);\par
+    height: 12px;\par
+\}\par
+\par
+.sliderM::-webkit-slider-thumb \{\par
+    height: 16px;\par
+    width: 16px;\par
+    border-radius: 50%;\par
+    background-color: var(--accent);\par
+    box-shadow: 0 0 0 4px var(--bg-color);\par
+\}\par
+\par
+.sliderVal \{\par
+    background-color: #000;\par
+    border-radius: 0px;\par
+\}\par
+\par
+.slider \{\par
+    background-color: transparent !important;\par
+\}\par
+\par
+.slider:before \{\par
+    position: absolute;\par
+    content: "\f1\'9f\'6f\f0\lang1033 ";\par
+    line-height: 36px;\par
+    text-align: center;\par
+    height: 100%;\par
+    width: 100%;\par
+    left: 0;\par
+    bottom: 0;\par
+    background-color: transparent;\par
+\}\par
+\par
+input:checked+.slider:before \{\par
+    transform: unset;\par
+    content: "\f2\'83\'6e\'83\'43\f1\'a3\'a1\f0 ";\par
+    font-size: 24px;\par
+    color: var(--accent);\par
+    overflow: hidden;\par
+\}\par
+\par
+input[type=color] \{\par
+    border-radius: 0;\par
+    border-color: var(--accent);\par
+    width: 62px;\par
+\}\par
+\par
+/*Info and Terms*/\par
+\par
+#mapInfoHolder \{\par
+    display: none;\par
+\}\par
+\par
+#uiBase.onMenu #mapInfoHolder \{\par
+    padding-right: 20px;\par
+    bottom: unset;\par
+    top: 100px;\par
+    display: block;\par
+\}\par
+\par
+#mapInfo \{\par
+    color: var(--accent);\par
+\}\par
+\par
+#modVote \{\par
+    color: var(--accent);\par
+\}\par
+\par
+#menuPingDisplay, #menuFPSDisplay \{\par
+    font-size: 16px;\par
+    color: var(--accent);\par
+\}\par
+\par
+#menuFPS \{\par
+    color: var(--accent) !important;\par
+\}\par
+\par
+#menuPingDisplay .material-icons \{\par
+    display: none;\par
+\}\par
+\par
+#menuPingText \{\par
+    font-size: 16px;\par
+    color: var(--accent);\par
+    margin-left: 20px;\par
+\}\par
+\par
+#menuPingText::after \{\par
+    content: " ms";\par
+\}\par
+\par
+#infoHolder>* \{\par
+    z-index: unset;\par
+\}\par
+\par
+#mapInfo \{\par
+    color: var(--accent);\par
+    z-index: 20;\par
+\}\par
+\par
+#uiBase.onMenu #termsInfo \{\par
+    bottom: 0;\par
+    right: 20px;\par
+    background-color: transparent;\par
+    z-index: 1;\par
+    position: fixed;\par
+\}\par
+\par
+.verticalSeparatorInline \{\par
+    display: none;\par
+\}\par
+\par
+.terms \{\par
+    display: none;\par
+    font-size: 24px;\par
+    color: #fff;\par
+\}\par
+\par
+.terms:nth-last-child(2) \{\par
+    display: block;\par
+\}\par
+\par
+.terms:nth-last-child(2)::before \{\par
+    content: "css by tae#4444";\par
+    margin-right: 20px;\par
+\}\par
+\par
+/*Section IV: HUD*/\par
+\par
+/*Health*/\par
+\par
+#hudClassIcon \{\par
+    width: 80px;\par
+    height: 80px;\par
+    bottom: 36px;\par
+    right: 20px;\par
+    border-radius: 0;\par
+    margin-right: 0;\par
+    display: block;\par
+    position: fixed;\par
+    background-color: transparent;\par
+\}\par
+\par
+#hudClassImg \{\par
+    border-radius: 0;\par
+\}\par
+\par
+#healthValueHolder \{\par
+    padding: 0;\par
+    margin: 0;\par
+    position: fixed;\par
+    left: calc(50% - 132px);\par
+    bottom: 64px;\par
+    background-color: transparent;\par
+\}\par
+\par
+#healthValue \{\par
+    color: var(--hp-ammo);\par
+    font-size: 64px;\par
+    text-shadow: 8px 4px var(--accent);\par
+    filter: drop-shadow(2px 2px var( --accent)) drop-shadow(-2px -2px var(--accent)) drop-shadow(-2px 2px var(--accent)) drop-shadow(2px -2px var(--accent));\par
+\}\par
+\par
+#healthValue::after \{\par
+    content: "HP";\par
+    font-size: 24px;\par
+    margin-left: 16px;\par
+    color: var(--hp-ammo);\par
+    text-shadow: 4px 2px var(--accent);\par
+\}\par
+\par
+#maxHP \{\par
+    display: none;\par
+\}\par
+\par
+#challIcon \{\par
+    display: none;\par
+\}\par
+\par
+#bottomLeftHolder::before \{\par
+    content: " ";\par
+    background: url(https://media.discordapp.net/attachments/785234774427959349/818944416994558052/yuki_bitch1.png);\par
+    background-size: 640px;\par
+    background-position-x: center;\par
+    background-position-y: top;\par
+    width: 320px;\par
+    height: 320px;\par
+    position: fixed;\par
+    padding: 0;\par
+    border-radius: 0px;\par
+    bottom: 0;\par
+    left: calc(50% - 420px);\par
+    z-index: -2;\par
+    filter: drop-shadow(8px 4px var(--accent));\par
+    opacity: var(--mascot-opacity);\par
+\}\par
+\par
+#healthBar \{\par
+    width: 280px;\par
+    height: 16px;\par
+    display: inline-flex;\par
+    justify-content: center;\par
+    background-color: rgba(0,0,0,0.4);\par
+    border-radius: 0;\par
+    position: fixed;\par
+    left: calc(50% - 140px);\par
+    bottom: 40px;\par
+    transform: skewX(-24deg);\par
+    outline: 6px solid var(--hp-ammo);\par
+\}\par
+\par
+.healthBarSeg \{\par
+    width: -webkit-fill-available;\par
+    margin: 0 -1px;\par
+    border-radius: 0;\par
+    background-color: transparent;\par
+\}\par
+\par
+.hpBSeg \{\par
+    border-radius: 0;\par
+    box-shadow: none;\par
+\}\par
+\par
+.hpBSeg[style*="#cd3732"] \{\par
+    background-color: var(--accent) !important;\par
+\}\par
+\par
+/*Ammo*/\par
+\par
+#ammoDisplay \{\par
+    transform: unset;\par
+    background-color: transparent;\par
+    position: fixed;\par
+    left: calc(50% - 40px);\par
+    bottom: calc(50% - 60px);\par
+    height: 8px;\par
+    width: 80px;\par
+    padding: 0;\par
+    margin: 0;\par
+    background-image: linear-gradient(var(--accent), var(--accent));\par
+\}\par
+\par
+#ammoVal \{\par
+    color: var(--hp-ammo);\par
+    font-size: 96px;\par
+    display: inline-block;\par
+    position: fixed;\par
+    left: calc(50% + 180px);\par
+    bottom: 20px;\par
+    text-shadow: 12px 6px var(--accent);\par
+    filter: drop-shadow(2px 2px var(--accent)) drop-shadow(-2px -2px var(--accent)) drop-shadow(-2px 2px var(--accent)) drop-shadow(2px -2px var(--accent));\par
+\}\par
+\par
+#ammoMax \{\par
+    display: none;\par
+\}\par
+\par
+#ammoIcon \{\par
+    display: none;\par
+\}\par
+\par
+#reloadMsg \{\par
+    bottom: calc(50% - 200px);\par
+    background-image: none;\par
+    color: var(--accent);\par
+    font-family: 'Material Icons';\par
+    font-size: 0;\par
+    animation: breathe 1s infinite alternate;\par
+\}\par
+\par
+#reloadMsg::before \{\par
+    content: "report_problem";\par
+    font-size: 64px;\par
+\}\par
+\par
+.killStreakItem \{\par
+    background-color: #000;\par
+    position: fixed;\par
+    bottom: 20px;\par
+    left: calc(50% + 320px);\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+/*Weapon Display*/\par
+\par
+#weapDisplay \{\par
+    bottom: 30px;\par
+    right: 160px;\par
+\}\par
+\par
+.weapItem \{\par
+    position: absolute;\par
+    bottom: 0;\par
+    right: 0;\par
+\}\par
+\par
+.weapIcon \{\par
+    filter: brightness(var(--weapon-icon-brightness)) drop-shadow(2px 2px var(--accent)) drop-shadow(-2px -2px var(--accent)) drop-shadow(-2px 2px var(--accent)) drop-shadow(2px -2px var(--accent)) drop-shadow(4px 4px 0px var(--accent));\par
+    opacity: 0 !important;\par
+    transition-duration: 0.25s;\par
+    height: 0;\par
+    width: 160px;\par
+\}\par
+\par
+.weapIcon[style*="1"] \{\par
+    opacity: 1 !important;\par
+    height: 80px;\par
+\}\par
+\par
+#weapIconMel \{\par
+    margin: 0 !important;\par
+\}\par
+\par
+.weapKey \{\par
+    display: none;\par
+\}\par
+\par
+/*Top Left*/\par
+\par
+#timerDisplay \{\par
+    border-radius: 0;\par
+    background-color: var(--bg-color);\par
+    box-shadow: 8px 8px var(--accent);\par
+    padding: 8px 16px;\par
+\}\par
+\par
+#timerDisplay::before \{\par
+    content: "TIME";\par
+    background-color: #000;\par
+    color: #fff;\par
+    padding: 0 4px;\par
+    position: absolute;\par
+    bottom: 8px;\par
+    left: -16px;\par
+\}\par
+\par
+#timerVal \{\par
+    font-size: 48px;\par
+    color: var(--accent);\par
+\}\par
+\par
+#timerIcon \{\par
+    display: none;\par
+\}\par
+\par
+.debugInfo \{\par
+    display: grid;\par
+    margin-top: 12px;\par
+\}\par
+\par
+#fpsDisplay \{\par
+    width: 120px;\par
+\}\par
+\par
+#ingameFPS \{\par
+    color: var(--accent) !important;\par
+\}\par
+\par
+#pingDisplay \{\par
+    grid-column: 2;\par
+\}\par
+\par
+#pingText, #ingressPacketCount, #ingressDataSize, #egressPacketCount, #egressDataSize \{\par
+    color: var(--accent);\par
+\}\par
+\par
+#pingText::after \{\par
+    content: " ms";\par
+    color: rgba(255,255,255,.5);\par
+\}\par
+\par
+#pingIcon \{\par
+    display: none;\par
+\}\par
+\par
+#curGameInfo \{\par
+    display: none;\par
+\}\par
+\par
+#teamScores \{\par
+    position: fixed;\par
+    top: 20px;\par
+    left: 50%;\par
+    transform: translateX(-50%);\par
+    background-color: #000;\par
+    border-radius: 0;\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+#teamScores[style="display: inline-block;"] \{\par
+    display: flex !important;\par
+\}\par
+\par
+.tScore:first-child \{\par
+    direction: rtl;\par
+\}\par
+\par
+.tScoreC \{\par
+    background-color: var(--accent);\par
+    border-radius: 50%;\par
+\}\par
+\par
+#tScoreC1 \{\par
+    margin-left: 10px;\par
+\}\par
+\par
+.tScoreT \{\par
+    font-size: 32px;\par
+    color: #fff;\par
+\}\par
+\par
+#gameMessage \{\par
+    top: 96px;\par
+\}\par
+\par
+/*Top Right*/\par
+\par
+#leaderDisplay \{\par
+    background-color: var(--bg-color);\par
+    border-radius: 0;\par
+    box-shadow: 8px 8px var(--accent);\par
+    padding-top: 32px;\par
+    margin-right: 12px;\par
+\}\par
+\par
+#leaderDisplay::before \{\par
+    content: "LEADER";\par
+    display: block;\par
+    background-color: #000;\par
+    color: #fff;\par
+    position: absolute;\par
+    font-size: 16px;\par
+    padding: 0 4px;\par
+    top: 8px;\par
+    right: -8px;\par
+\}\par
+\par
+.leaderItem \{\par
+    font-size: 24px;\par
+\}\par
+\par
+.leaderName \{\par
+    color: var(--accent);\par
+\}\par
+\par
+.leaderCounter, .leaderNameM, .leaderScore \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.leaderNameF \{\par
+    color: var(--text-color);\par
+    opacity: 0.5;\par
+\}\par
+\par
+.topRightCounters \{\par
+    position: fixed;\par
+    top: 50%;\par
+    right: 20px;\par
+    display: flex;\par
+    flex-direction: column;\par
+    align-items: flex-end;\par
+    width: auto !important;\par
+    transform: translateY(-50%);\par
+\}\par
+\par
+.countIcon \{\par
+    background-color: transparent;\par
+    border-radius: 0;\par
+    font-size: 32px;\par
+\}\par
+\par
+#killsIcon, #deathsIcon, #streakIcon, #kdIcon \{\par
+    height: 24px;\par
+    width: 24px;\par
+\}\par
+\par
+.countIcon .material-icons \{\par
+    font-size: 28px !important;\par
+\}\par
+\par
+/*End Card*/\par
+\par
+#endTimer \{\par
+    color: #fff;\par
+    font-style: normal;\par
+    text-shadow: none;\par
+\}\par
+\par
+#matchVoteHolder \{\par
+    background-color: transparent;\par
+    top: 210px;\par
+\}\par
+\par
+.matchVote \{\par
+    box-shadow: 6px 6px var(--accent);\par
+    border-radius: 0;\par
+    border: 6px solid var(--bg-color);\par
+\}\par
+\par
+.endCard \{\par
+    background-color: var(--bg-color);\par
+    border-radius: 0;\par
+    box-shadow: 8px 8px var(--accent);\par
+\}\par
+\par
+#tabHolder \{\par
+    border-radius: 0;\par
+    background-color: #000;\par
+    position: relative;\par
+    margin-top: 4px;\par
+    right: -12px;\par
+    width: calc(100% + 20px);\par
+\}\par
+\par
+.tabHeader \{\par
+    border-width: 0 !important;\par
+    color: #fff;\par
+    font-size: 20px;\par
+\}\par
+\par
+#endTable \{\par
+    background-color: transparent;\par
+\}\par
+\par
+th, td \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+td[style*="#fff"] \{\par
+    color: var(--text-color) !important;\par
+\}\par
+\par
+.endTableN \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.endTableN[style*="#eb5656"] \{\par
+    color: var(--accent) !important;\par
+\}\par
+\par
+.endTableN[style*="#fff"] \{\par
+    color: var(--text-color) !important;\par
+\}\par
+\par
+.endTableN[style*="#fff"]::before \{\par
+    content: "\f1\'a1\'b7\f0 ";\par
+    -webkit-text-stroke: 2px;\par
+    margin-right: 4px;\par
+    margin-left: 0px;\par
+    color: var(--accent);\par
+\}\par
+\par
+.endTableN[style*="rgba(255,255,255,0.6)"] \{\par
+    color: var(--text-color) !important;\par
+\}\par
+\par
+.endTableN span[style*="#fff"] \{\par
+    color: var(--text-color) !important;\par
+\}\par
+\par
+.reportBut \{\par
+    color: var(--accent);\par
+    text-shadow: none;\par
+\}\par
+\par
+.shareBut \{\par
+    color: var(--text-color) !important;\par
+    text-shadow: none;\par
+\}\par
+\par
+.endSection \{\par
+    background-color: transparent;\par
+\}\par
+\par
+.endTitle, .fundsVal \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.endTitle \{\par
+    font-size: 20px;\par
+\}\par
+\par
+.gfSection \{\par
+    background-color: transparent;\par
+\}\par
+\par
+.modeIcon \{\par
+    filter: drop-shadow(2px 2px #000) drop-shadow(-2px -2px #000) drop-shadow(-2px 2px #000) drop-shadow(2px -2px #000) drop-shadow(2px 2px #000);\par
+\}\par
+\par
+.modeStatus \{\par
+    color: var(--accent);\par
+    font-size: 24px;\par
+\}\par
+\par
+.crStat \{\par
+    border-radius: 0;\par
+    background-color: #000;\par
+    border-width: 0;\par
+\}\par
+\par
+.crLabel \{\par
+    font-size: 16px;\par
+    color: var(--accent);\par
+\}\par
+\par
+#kdLayout \{\par
+    background-color: #000;\par
+    border-width: 0;\par
+    border-radius: 0;\par
+\}\par
+\par
+.endTitle, .fundsVal \{\par
+    color: var(--text-color);\par
+\}\par
+\par
+.xpEndBar \{\par
+    border-radius: 0;\par
+    background-color: #000;\par
+\}\par
+\par
+.clanwarsSection \{\par
+    background-color: transparent;\par
+\}\par
+\par
+#cwRegionOcean \{\par
+    border-radius: 0;\par
+\}\par
+\par
+#cwRegionMap \{\par
+    border-radius: 0;\par
+    box-shadow: none;\par
+    filter: none;\par
+    box-shadow: inset 0 0 0 8px;\par
+\}\par
+\par
+.cwSumStat \{\par
+    background-color: #000;\par
+    border-radius: 0;\par
+\}\par
+\par
+#cwRegionText \{\par
+    color: var(--text-color);\par
+    text-transform: uppercase;\par
+\}\par
+\par
+.cwSumStat \{\par
+    background-color: #000;\par
+    border-radius: 0;\par
+\}\par
+\par
+#cwRegionText \{\par
+    display: none;\par
+\}\par
+\par
+/*Section V: Spectate UI*/\par
+\par
+#spectateHUD \{\par
+    text-shadow: none;\par
+\}\par
+\par
+#specNames \{\par
+    padding: 8px 16px;\par
+    border-radius: 0;\par
+    background-color: #000;\par
+    box-shadow: 6px 6px var(--accent);\par
+\}\par
+\par
+#specScoreTm0 \{\par
+    clip-path: none;\par
+    background-color: #000;\par
+\}\par
+\par
+#specScoreTm1 \{\par
+    clip-path: none;\par
+    background-color: var(--accent);\par
+\}\par
+\par
+#specTimer \{\par
+    background-color: var(--bg-color);\par
+    color: var(--accent);\par
+\}\par
+\par
+#specGameInfo \{\par
+    color: var(--accent);\par
+\}\par
+\par
+#specContr \{\par
+    border: none;\par
+    background-color: #000;\par
+    border-radius: 0;\par
+    box-shadow: 8px 8px var(--accent);\par
+\}\par
+\par
+.specContrI \{\par
+    color: #fff;\par
+\}\par
+\par
+#specStats \{\par
+    background-color: var(--bg-color);\par
+    border-radius: 0;\par
+    box-shadow: 8px 8px var(--accent);\par
+\}\par
+\par
+.specPHead \{\par
+    background-color: #000;\par
+    padding: 0px 8px;\par
+\}\par
+\par
+.specLevelBox \{\par
+    margin-top: -4px;\par
+\}\par
+\par
+#spectHPB \{\par
+    background-color: #000;\par
+\}\par
+\par
+#spectHPV \{\par
+    top: 48px;\par
+\}\par
+\par
+/*Section VI: Other*/\par
+\par
+#accManagerBtn \{\par
+    position: fixed;\par
+    top: 220px;\par
+    left: 20px;\par
+    width: auto !important;\par
+    background-color: transparent !important;\par
+    box-shadow: none !important;\par
+    text-shadow: none !important;\par
+    padding: 0 !important;\par
+    margin: 0 !important;\par
+    color: var(--accent);\par
+    font-size: 24px !important;\par
+\}\lang21\par
+}
+ 
